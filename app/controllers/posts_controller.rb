@@ -5,7 +5,7 @@ class PostsController < ApplicationController
   
   def index
     @posts = Post.all
-
+    #gday
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @posts }
