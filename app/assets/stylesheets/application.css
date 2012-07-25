@@ -14,3 +14,7 @@
 
 /*Import Bootstrap css to make this prettier!*/
 @import url('bootstrap.css');
+
+body {
+	margin: 40px;
+}
