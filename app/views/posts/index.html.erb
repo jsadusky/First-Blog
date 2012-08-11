@@ -19,38 +19,30 @@
 </div>
 
 <h1>Listing posts</h1>
-<div class="row">
-  <div class="span2">
-    <h3>Name</h3>
-  </div>
-  <div class="span4">  
-    <h3>Title</h3>
-  </div>
-  <div class="span6">
-    <h3>Content</h3>
-  </div>
-  <br />
-</div> 
-
-
+<table class="table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Title</th>
+      <th>Content</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+ 
 <% @posts.each do |post| %>
-<div class="row ">
-  <div class="span2">
-    <%= post.name %>
-  </div>
-  <div class = "span4">
-    <%= post.title %>
-  </div>
-  <div class = "span4">
-    <%= post.content %>
-  </div>
-  <div class = "span2">
-    <%= link_to 'Show', post, :class => "button" %>
-    <%= link_to 'Edit', edit_post_path(post) %>
-    <%= link_to 'Destroy', post, confirm: 'Are you sure?', method: :delete %>
-  </div>
-</div>
+  <tr>
+    <td><%= post.name %></td>
+    <td><%= post.title %></td>
+    <td><%= post.content %></td>
+    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?',
+                                     :method => :delete %></td>
+  </tr>
 <% end %>
+</table>
 
 <br />
 
