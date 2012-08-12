@@ -1,4 +1,5 @@
 <% @post.tags.build %>
+<div class="form">
 <%= form_for(@post) do |post_form| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
@@ -11,22 +12,26 @@
       </ul>
     </div>
   <% end %>
+  <fieldset>
     <div class="field">
       <%= post_form.label :name %><br />
       <%= post_form.text_field :name %>
     </div>
     <div class="field">
       <%= post_form.label :title %><br />
-      <%= post_form.text_field :title %>
+      <%= post_form.text_field :title, :class => "span4" %>
     </div>
     <div class="field">
       <%= post_form.label :content %><br />
-      <%= post_form.text_area :content %>
+      <%= post_form.text_area :content, :class => "span8" %>
     </div>
-  <h2>Tags</h2>
-  <%= render  :partial => 'tags/form',
-              :locals => {:form => post_form} %>
+    <h2>Tags</h2>
+    <%= render  :partial => 'tags/form',
+                :locals => {:form => post_form} %>
+  </fieldset>
   <div class="actions">
     <%= post_form.submit %>
   </div>
+  
 <% end %>
+</div>
