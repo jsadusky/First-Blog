@@ -1,4 +1,6 @@
 Blog::Application.routes.draw do
+  devise_for :users
+
   match "posts/get_latest" => "posts#get_latest"
 
   resources :posts do

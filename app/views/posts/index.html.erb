@@ -1,24 +1,13 @@
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-      <ul class="nav">
-        <li class="active">
-          <a href="#">Home</a>
-        </li>
-        <li><%= link_to 'New Post', new_post_path %></li>
-        <li><a href="#">Contact Me</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
+<%= render "navigationBar" %>
 
 <div class="hero-unit">
   <h1>Welcome</h1>
   <h2>To my Blog
-  <p><a class="btn primary large pull-right">Contact me &raquo;</a></p>
+  <p><a class="btn primary large pull-right" href="mailto:jsadusky@gmail.com">Contact me &raquo;</a></p>
 </div>
 
 <h1>Listing posts</h1>
+
 <table class="table-striped">
   <thead>
     <tr>

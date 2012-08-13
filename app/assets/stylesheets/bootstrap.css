@@ -161,7 +161,7 @@ body {
   font-size: 13px;
   line-height: 18px;
   color: #333333;
-  background-color: #ffffff;
+  background-color: #2a1eff;
 }
 
 a {
@@ -4941,7 +4941,7 @@ a.badge:hover {
 
 .hero-unit {
   padding: 60px;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
   background-color: #eeeeee;
   -webkit-border-radius: 6px;
      -moz-border-radius: 6px;
